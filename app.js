@@ -1,5 +1,6 @@
 const express = require('express');
-var exphbs  = require('express-handlebars');
+const path = require('path');
+const exphbs  = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
@@ -18,6 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(methodOverride('_method'));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Connect to MongoDB
 const db = require('./config/database');
