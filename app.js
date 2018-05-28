@@ -4,7 +4,7 @@ const exphbs  = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const _ = require('lodash');
+
 
 const app = express();
 
